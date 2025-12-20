@@ -185,11 +185,8 @@ function Home() {
                       <span className="text-4xl">🌟</span>
                     </div>
                     <h3 className="text-2xl font-bold text-textPrimary mb-2">
-                      Primera consulta gratuita
+                      Reserva tu primera consulta
                     </h3>
-                    <p className="text-textSecondary">
-                      Conoce a tu terapeuta sin compromiso
-                    </p>
                   </div>
 
                   <Link
