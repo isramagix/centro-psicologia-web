@@ -1,48 +1,43 @@
 function Equipo() {
   const miembros = [
     {
-      nombre: "Dra. María González",
-      especialidad: "Psicóloga Clínica",
+      nombre: "Nuria Merino",
+      especialidad: "Psicóloga Clínica e Infanto-Juvenil",
       foto: "👩‍⚕️",
       descripcion:
-        "Especialista en terapia cognitivo-conductual con 15 años de experiencia",
+        "Especialista en terapia cognitivo-conductual",
       educacion: [
         "Doctorado en Psicología Clínica",
-        "Máster en Terapia Familiar",
+        "Máster en Intervención  Infanto-Juvenil",
+        "Master en Terapia de Pareja",
       ],
-      areas: ["Ansiedad", "Depresión", "Terapia de pareja"],
+      areas: ["Ansiedad", "Psicogerontología","Terapia de pareja" ],
     },
     {
-      nombre: "Dr. Carlos Ramírez",
-      especialidad: "Psicólogo Infantil",
-      foto: "👨‍⚕️",
-      descripcion: "Experto en desarrollo infantil y terapia de juego",
+      nombre: "Celia Sánchez",
+      especialidad: "Psicólogía de la Salud y Psicogerontología",
+      foto: "👩‍⚕️",
+      descripcion: " Experta en bienestar emocional y calidad de vida en personas mayores",
       educacion: [
-        "Licenciatura en Psicología",
-        "Especialización en Psicología Infantil",
+        "Máster en Psicología de la Salud",
+        "Master en Psicología General Sanitaria", 
+        "Especialización en Psicogerontología",
       ],
-      areas: ["Terapia infantil", "TDAH", "Desarrollo emocional"],
+      areas: ["Psicogerontología", "Ansiedad", "Promocion del Desarrollo Personal"],
     },
     {
-      nombre: "Lic. Ana Martínez",
-      especialidad: "Terapeuta Familiar",
-      foto: "👩‍🏫",
+      nombre: "Cristina García",
+      especialidad: "Psicología Infanto-Juvenil",
+      foto: "👩‍⚕️",
       descripcion:
-        "Especializada en dinámica familiar y resolución de conflictos",
+        "Especializada en adolescencia y procesos del    aprendizaje",
       educacion: [
-        "Máster en Terapia Familiar Sistémica",
-        "Certificación en Mediación",
+        "Máster en Psicología General Sanitaria","Máster en Intervención  Infanto-Juvenil",
+        "Formación en Trastornos del Aprendizaje",
       ],
-      areas: ["Terapia familiar", "Mediación", "Crianza positiva"],
+      areas: ["Adolescencia", "Procesos del aprendizaje", "Gestión emocional" ],
     },
-    {
-      nombre: "Dr. Luis Herrera",
-      especialidad: "Psicoterapeuta",
-      foto: "👨‍💼",
-      descripcion: "Enfoque humanista e integrador en psicoterapia",
-      educacion: ["Doctorado en Psicoterapia", "Certificación en Mindfulness"],
-      areas: ["Desarrollo personal", "Mindfulness", "Estrés laboral"],
-    },
+    
   ];
 
   return (
@@ -61,11 +56,71 @@ function Equipo() {
 
       {/* Equipo Grid */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {miembros.map((miembro, index) => (
+        {/* Primera fila: 2 tarjetas */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-8">
+          {miembros.slice(0, 2).map((miembro, index) => (
             <div
               key={index}
               className="bg-surface p-8 rounded-2xl shadow-lg border border-border hover:shadow-2xl transition duration-300"
+            >
+              <div className="flex items-start gap-6">
+                <div className="text-6xl flex-shrink-0">{miembro.foto}</div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-semibold text-textPrimary mb-1">
+                    {miembro.nombre}
+                  </h3>
+                  <p className="text-primary font-medium mb-3">
+                    {miembro.especialidad}
+                  </p>
+                  <p className="text-textSecondary mb-4">
+                    {miembro.descripcion}
+                  </p>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-textPrimary mb-2">
+                      Formación:
+                    </h4>
+                    <ul className="space-y-1">
+                      {miembro.educacion.map((edu, idx) => (
+                        <li
+                          key={idx}
+                          className="text-textSecondary text-sm flex items-start"
+                        >
+                          <span className="text-secondary mr-2">•</span>
+                          {edu}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-textPrimary mb-2">
+                      Áreas de especialización:
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {miembro.areas.map((area, idx) => (
+                        <span
+                          key={idx}
+                          className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+                        >
+                          {area}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Segunda fila: 1 tarjeta centrada */}
+        <div className="flex justify-center max-w-5xl mx-auto">
+          {miembros.slice(2, 3).map((miembro, index) => (
+            <div
+              key={index + 2}
+              className="bg-surface p-8 rounded-2xl shadow-lg border border-border hover:shadow-2xl transition duration-300"
+              style={{ width: 'calc(50% - 1rem)' }}
             >
               <div className="flex items-start gap-6">
                 <div className="text-6xl flex-shrink-0">{miembro.foto}</div>

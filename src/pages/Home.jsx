@@ -56,17 +56,16 @@ function Home() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <div className="bg-surface p-8 rounded-2xl shadow-lg border border-border hover:shadow-2xl hover:-translate-y-2 transition duration-300 group">
             <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
               <span className="text-4xl">💜</span>
             </div>
             <h3 className="text-2xl font-semibold text-textPrimary mb-3">
-              Terapia Individual
+              Psicología Clínica y de la Salud
             </h3>
             <p className="text-textSecondary mb-6 leading-relaxed">
-              Sesiones personalizadas para abordar ansiedad, depresión,
-              autoestima y desarrollo personal.
+              Evaluación y diagnóstico, tratamiento psicológico y promoción del bienestar emocional
             </p>
             <Link
               to="/servicios"
@@ -97,14 +96,31 @@ function Home() {
 
           <div className="bg-surface p-8 rounded-2xl shadow-lg border border-border hover:shadow-2xl hover:-translate-y-2 transition duration-300 group">
             <div className="w-16 h-16 bg-gradient-to-br from-accent to-orange-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
-              <span className="text-4xl">🏠</span>
+              <span className="text-4xl">🧓</span>
             </div>
             <h3 className="text-2xl font-semibold text-textPrimary mb-3">
-              Terapia Familiar
+              Psicogerontología
             </h3>
             <p className="text-textSecondary mb-6 leading-relaxed">
-              Mejora los vínculos familiares y crea un ambiente de comunicación
-              positiva y respeto mutuo.
+            Atención psicológica a personas mayores promoviendo autonomía, envejecimiento activo y apoyo familiar continuo.
+            </p>
+            <Link
+              to="/servicios"
+              className="text-accent font-semibold hover:text-orange-700 transition flex items-center gap-2"
+            >
+              Conoce más <span>→</span>
+            </Link>
+          </div>
+
+          <div className="bg-surface p-8 rounded-2xl shadow-lg border border-border hover:shadow-2xl hover:-translate-y-2 transition duration-300 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-accent to-orange-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
+              <span className="text-4xl">🧠</span>
+            </div>
+            <h3 className="text-2xl font-semibold text-textPrimary mb-3">
+            Ansiedad, Depresión y Procesos de aprendizaje
+            </h3>
+            <p className="text-textSecondary mb-6 leading-relaxed">
+            Intervenciones terapéuticas para manejar la ansiedad, superar la depresión y mejorar los procesos de aprendizaje.
             </p>
             <Link
               to="/servicios"
@@ -255,11 +271,12 @@ function Home() {
               ))}
             </div>
             <p className="text-textSecondary mb-6 italic leading-relaxed">
-              "Gracias a la terapia familiar, hemos aprendido a resolver
-              conflictos de forma positiva. ¡Totalmente recomendable!"
+              "El equipo nos brindó un apoyo invaluable durante el proceso de
+              envejecimiento de mi padre. Gracias a ellos, ha mejorado su calidad
+              de vida."
             </p>
             <p className="text-textPrimary font-semibold">Familia García</p>
-            <p className="text-textSecondary text-sm">Terapia familiar</p>
+            <p className="text-textSecondary text-sm"> Psicogerontología</p>
           </div>
         </div>
       </section>

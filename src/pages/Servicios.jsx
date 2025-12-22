@@ -9,7 +9,7 @@ function Servicios() {
         "Ansiedad y estrés",
         "Depresión",
         "Autoestima",
-        "Duelo y pérdidas",
+        "Crecimiento personal", 
       ],
     },
     {
@@ -25,21 +25,21 @@ function Servicios() {
       ],
     },
     {
-      titulo: "Terapia Familiar",
+      titulo: "Terapia Infanto-Juvenil",
       descripcion: "Mejora los vínculos y la dinámica familiar",
-      icon: "🏠",
+      icon: "🧒",
       detalles: [
-        "Conflictos familiares",
-        "Comunicación",
-        "Crianza positiva",
-        "Familia reconstituida",
+        "Evalución emocional",
+        "Dificultades de aprendizaje",
+        "Regulación conductual",
+        "Apoyo socioemocional",
       ],
     },
     {
-      titulo: "Terapia Infantil",
-      descripcion: "Apoyo especializado para niños y adolescentes",
-      icon: "🎨",
-      detalles: ["Conducta", "Emociones", "Aprendizaje", "Socialización"],
+      titulo: "Terapia  en personas mayoress",
+      descripcion: "Apoyo especializado para afrontar los desafíos de la tercera edad",
+      icon: "🧓",
+      detalles: ["Autonomía", "Envejecimiento activo", "Apoyo familiar", "Bienestar emocional"],
     },
     {
       titulo: "Mindfulness y Meditación",
@@ -52,18 +52,7 @@ function Servicios() {
         "Bienestar emocional",
       ],
     },
-    {
-      titulo: "Orientación Vocacional",
-      descripcion:
-        "Descubre tu camino profesional y toma decisiones con confianza",
-      icon: "🎯",
-      detalles: [
-        "Autoconocimiento",
-        "Intereses profesionales",
-        "Toma de decisiones",
-        "Plan de carrera",
-      ],
-    },
+    
   ];
 
   return (
@@ -83,10 +72,41 @@ function Servicios() {
 
       {/* Servicios Grid */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicios.map((servicio, index) => (
+        {/* Primera fila: 3 tarjetas */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8">
+          {servicios.slice(0, 3).map((servicio, index) => (
             <div
               key={index}
+              className="bg-surface p-8 rounded-2xl shadow-lg border border-border hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+            >
+              <div className="text-5xl mb-4">{servicio.icon}</div>
+              <h3 className="text-2xl font-semibold text-textPrimary mb-3">
+                {servicio.titulo}
+              </h3>
+              <p className="text-textSecondary mb-6">{servicio.descripcion}</p>
+              <ul className="space-y-2">
+                {servicio.detalles.map((detalle, idx) => (
+                  <li
+                    key={idx}
+                    className="text-textSecondary flex items-center"
+                  >
+                    <span className="text-primary mr-2">✓</span>
+                    {detalle}
+                  </li>
+                ))}
+              </ul>
+              <button className="mt-6 w-full bg-primary/10 hover:bg-primary hover:text-white text-primary font-semibold py-3 rounded-lg transition duration-300">
+                Más información
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Segunda fila: 2 tarjetas centradas */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {servicios.slice(3, 5).map((servicio, index) => (
+            <div
+              key={index + 3}
               className="bg-surface p-8 rounded-2xl shadow-lg border border-border hover:shadow-2xl hover:-translate-y-2 transition duration-300"
             >
               <div className="text-5xl mb-4">{servicio.icon}</div>

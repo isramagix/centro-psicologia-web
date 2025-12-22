@@ -64,7 +64,7 @@ function Contacto() {
                   <option>Selecciona una opción</option>
                   <option>Terapia Individual</option>
                   <option>Terapia de Pareja</option>
-                  <option>Terapia Familiar</option>
+                  <option>Psicogerontología </option>
                   <option>Terapia Infantil</option>
                   <option>Otra consulta</option>
                 </select>
@@ -105,9 +105,9 @@ function Contacto() {
                       Dirección
                     </h4>
                     <p className="text-textSecondary">
-                      Calle Principal 123
+                      Calle XXXXXXX
                       <br />
-                      28001 Madrid, España
+                      13001 Ciudad Real, España
                     </p>
                   </div>
                 </div>
@@ -118,8 +118,8 @@ function Contacto() {
                     <h4 className="font-semibold text-textPrimary mb-1">
                       Teléfono
                     </h4>
-                    <p className="text-textSecondary">+34 912 345 678</p>
-                    <p className="text-textSecondary">+34 600 123 456</p>
+                    <p className="text-textSecondary">+34 912 XXX XX8</p>
+                    <p className="text-textSecondary">+34 600 XXX XX  6</p>
                   </div>
                 </div>
 
@@ -130,7 +130,7 @@ function Contacto() {
                       Email
                     </h4>
                     <p className="text-textSecondary">
-                      info@armoniapsicologia.com
+                      contacto@armoniaintegralpsicología.com
                     </p>
                   </div>
                 </div>
@@ -142,8 +142,10 @@ function Contacto() {
                       Horario
                     </h4>
                     <p className="text-textSecondary">
-                      Lunes a Viernes: 9:00 - 20:00
+                      Lunes a Jueves: 10:00 - 20:00
                       <br />
+                      Viernes: 10:00 - 19:00
+                       <br />
                       Sábados: 10:00 - 14:00
                     </p>
                   </div>
